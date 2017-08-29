@@ -4,8 +4,8 @@ Having some fun with A-Frame and WebVR
 For now following a youtube [series](https://www.youtube.com/playlist?list=PLRtjMdoYXLf4inSULAHyCMqpIUj4cmBTr)
 
 ## Progress
-	[Episode 1:](http://luvneesh.me/A-Frame_WebVR/Ep1) [=====>] 100%
-	[Episode 2:](http://luvneesh.me/A-Frame_WebVR/Ep2/) [=====>] 100%
+>[Episode 1:](http://luvneesh.me/A-Frame_WebVR/Ep1) [=====>] 100%
+>[Episode 2:](http://luvneesh.me/A-Frame_WebVR/Ep2/) [=====>] 100%
 	Episode 3: [......] 0%
 	Episode 4: [......] 0%
 	Episode 5: [......] 0%
