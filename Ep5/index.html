@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+<html>
+<head>
+	<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+</head>
+<body>
+	<a-scene>
+		<a-assets>
+			<img id="texture" src="img/texture.jpg">
+		</a-assets>
+		
+		<a-box  width="1" height="1" depth="1"
+				position="-4 2 -3"
+				rotation="15 45 45"
+				scale="1 2.5 1"
+				material="src: #texture">
+			<a-animation attribute="rotation" repeat="indefinite" to="0 360 0"></a-animation>
+		</a-box>
+
+		<a-cone color = "cyan" position = "0 2 -5" scale= "2 2 1" rotation="180 60 -30">
+			
+			<a-animation attribute="position" from="0 2 -5" to="4 3 -8" repeat="indefinite"></a-animation>
+			<a-animation attribute="rotation" repeat="indefinite" to="180 0 0"></a-animation>
+
+			<a-sphere color="tomato" position = "0 -0.6 0" scale = "0.25 0.25 0.5"> </a-sphere>
+		</a-cone>
+	</a-scene>
+</body>
+</html>
