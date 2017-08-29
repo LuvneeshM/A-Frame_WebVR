@@ -3,7 +3,7 @@ Having some fun with A-Frame and WebVR
 
 For now following a youtube [series](https://www.youtube.com/playlist?list=PLRtjMdoYXLf4inSULAHyCMqpIUj4cmBTr)
 
-##Progress
+## Progress
 	Episode 1: [=====>] 100%
 	Episode 2: [......] 0%
 	Episode 3: [......] 0%
