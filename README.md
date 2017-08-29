@@ -5,7 +5,7 @@ For now following a youtube [series](https://www.youtube.com/playlist?list=PLRtj
 
 ## Progress
 	Episode 1: [=====>] 100%
-	Episode 2: [......] 0%
+	Episode 2: [=>....] 20%
 	Episode 3: [......] 0%
 	Episode 4: [......] 0%
 	Episode 5: [......] 0%
