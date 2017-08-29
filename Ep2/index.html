@@ -9,7 +9,14 @@
 <body>
 	<a-scene>
 		<!-- A box!! -->
-		<a-box color="#03A9F4" width="2" height="1" depth="2" ></a-box>
+		<!-- box parameters: width, height, depth, position, rotation, scale, visible, material, geometry -->
+		<a-box color="#03A9F4" width="2" height="1" depth="2" position="0 2 -5" rotation="0 45 45">
+			<!-- The sphere position is affected by the box, the spheres parent -->
+			<a-sphere color="tomato" position = "0 0 0"> </a-sphere>
+		</a-box>
+		<a-cone color = "cyan" position = "4 2 -5" scale= "2 2 1" rotation="180 60 -30">
+			<a-sphere color="tomato" position = "0 0.5 0" scale = "0.25 0.25 0.5"> </a-sphere>
+		</a-cone>
 	</a-scene>
 </body>
 </html>
