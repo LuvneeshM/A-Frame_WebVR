@@ -1,31 +1,47 @@
 <!DOCTYPE>
 <html>
-<html>
 <head>
 	<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+
 </head>
 <body>
 	<a-scene>
 		<a-assets>
 			<img id="texture" src="img/texture.jpg">
+			<a-mixin id="cube" geometry="primitive: box"></a-mixin>
+    		<a-mixin id="cube-hovered" material="color: magenta"></a-mixin>
+    		<a-mixin id="cube-selected" material="color: cyan"></a-mixin>
+			
 		</a-assets>
 		
-		<a-box id="box_1" width="1" height="1" depth="1"
+		<a-box id="box_1" class="obj_hover" width="1" height="1" depth="1"
 				position="-4 2 -3"
 				rotation="15 45 45"
 				scale="1 2.5 1"
 				material="src: #texture">
-			<a-animation attribute="rotation" begin="click" repeat="indefinite" to="0 360 0"></a-animation>
+			<a-animation attribute="rotation" begin="click" repeat="1" to="0 360 0"></a-animation>
 
 			<!-- <a-event name="mouseenter" scale="4 1 6"></a-event> -->
 		</a-box>
 
+		<a-box class="obj_hover" color="green" position="3 2 -6" scale="2 2 2"></a-box> 
+
+		<a-box class="obj_hover" color="blue" position="0 4 -6" scale="2 2 2"></a-box> 
+
 		<a-camera look-controls wasd-controls posiion="0 0 -1">
 		<!-- Place the cursor as a child of the camera entity so that it will always be rendered on top -->
-			<a-cursor color="#FF0000"
-		</a-camera>
+			<a-cursor fuse="true" geometry="primitive: ring; radiusOuter: 0.03; radiusInner: 0.02;" color="#FF0000">
+			<!-- now you can hover over the obj -->
+				<a-animation begin="fusing" easing="ease-in" attribute="scale"
+						fill="backwards" from ="1 1 1" to="0.1 0.1 0.1" dur="1500"
+			</a-camera>
 
 	</a-scene>
+
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
 
 	<script>
 		var box = document.querySelector('#box_1')
@@ -38,6 +54,32 @@
 				z: 3.5
 			});
 		});
+
+		// wait for dom to load
+		$(document).ready(function(){
+			objectSelected();
+		});
+
+		//since only can hover 1 object as a time, store its original color
+		var prevColor;
+		function objectSelected(){
+			var $hoverElems = $(".obj_hover");
+			for(var i = 0; i < $hoverElems.length;i++){
+				var $hoverElem = $hoverElems[i];
+				$hoverElem.addEventListener('mouseenter', hoverObj.bind(this,$hoverElem));
+				$hoverElem.addEventListener('mouseleave', leaveObj.bind(this,$hoverElem));
+			}
+		}
+		//hover over the obejct
+		function hoverObj($hoverElem){
+			prevColor = $hoverElem.getAttribute('color');
+			$hoverElem.setAttribute('color', 'magenta');
+		}
+		//left the object
+		function leaveObj($hoverElem){
+			$hoverElem.setAttribute('color', prevColor);
+		}
+
 	</script>
 </body>
 </html>
