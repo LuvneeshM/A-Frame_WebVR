@@ -10,14 +10,34 @@
 			<img id="texture" src="img/texture.jpg">
 		</a-assets>
 		
-		<a-box  width="1" height="1" depth="1"
+		<a-box id="box_1" width="1" height="1" depth="1"
 				position="-4 2 -3"
 				rotation="15 45 45"
 				scale="1 2.5 1"
 				material="src: #texture">
-			<a-animation attribute="rotation" repeat="indefinite" to="0 360 0"></a-animation>
+			<a-animation attribute="rotation" begin="click" repeat="indefinite" to="0 360 0"></a-animation>
+
+			<!-- <a-event name="mouseenter" scale="4 1 6"></a-event> -->
 		</a-box>
 
+		<a-camera look-controls wasd-controls posiion="0 0 -1">
+		<!-- Place the cursor as a child of the camera entity so that it will always be rendered on top -->
+			<a-cursor color="#FF0000"
+		</a-camera>
+
 	</a-scene>
+
+	<script>
+		var box = document.querySelector('#box_1')
+		box.addEventListener("mouseenter", function( )
+		{
+			box.setAttribute("scale",
+			{
+				x: 0.5,
+				y: 2,
+				z: 3.5
+			});
+		});
+	</script>
 </body>
 </html>
