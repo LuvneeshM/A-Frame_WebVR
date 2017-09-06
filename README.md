@@ -11,7 +11,7 @@ For now following a youtube [series](https://www.youtube.com/playlist?list=PLRtj
 * [Episode 5:](http://luvneesh.me/A-Frame_WebVR/Ep5/) [=====>] 100%
 * [Episode 6:](http://luvneesh.me/A-Frame_WebVR/Ep6/) [=====>] 100%
 * [Episode 7:](http://luvneesh.me/A-Frame_WebVR/Ep7/) [=====>] 100%
-* Episode 8: [......] 0%
+* [Episode 8:](http://luvneesh.me/A-Frame_WebVR/Ep8/) [=====>] 100%
 * Episode 9: [......] 0%
 * Episode 10: [......] 0%
 * Episode 11: [......] 0%
