@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+</head>
+<body>
+	<a-scene>
+		<!-- Loading the model -->
+		<a-assests>
+			<a-asset-item id="object" src="Model/Earth/earth.obj"></a-assets>
+			<a-asset-item id="material" src="Model/Earth/earth.mtl"></a-assets>
+		</a-assests>
+
+		<!-- render the model -->
+		<a-obj-model src="#object" mtl="#material" scale="0.1 0.1 0.1" position="0 2 -5"></a-obj-model>
+
+		
+	</a-scene>
+
+
+</body>
+</html>
