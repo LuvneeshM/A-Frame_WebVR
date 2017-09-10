@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+</head>
+<body>
+	<a-scene>
+		<a-assets>
+			<img id="my-image" src="img/underwater_ocean.jpg"/>
+		</a-assets>
+
+		<a-curvedimage src="#my-image" height="15" 
+						radius="5.7" theta-length="360"
+						rotation = "0 0 0"
+						scale="0.95 0.95 0.95"
+						position="0 2 5" ></a-curvedimage>
+		
+		<a-camera position="0 0.5 8"></a-camera>
+	</a-scene>
+</body>
+</html>
